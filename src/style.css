@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* CARROT KIDS – Farbpalette */
+:root {
+  --primary: #123D2A;
+  --accent: #FF7900;
+  --bg: #FFF8EC;
+  --text: #18382B;
+  --surface: #F3EAD8;
+  /* Dunkelorange für Buttons mit weißer Schrift */
+  --button-bg: #B84300;
+  --button-text: #FFFFFF;
+}
+
+/*
+  Kontrastprüfung nach WCAG AA:
+
+  Fließtext:
+  #18382B auf #FFF8EC – bestanden (4.5:1)
+
+  Überschriften:
+  #FFF8EC auf #123D2A – bestanden (4.5:1)
+
+  Buttons:
+  #FFFFFF auf #FF7900 – nicht bestanden
+  #FFFFFF auf #B84300 – bestanden (4.5:1)
+
+  Anpassung:
+  Für Buttons wird ein dunklerer Orangeton verwendet,
+  damit weißer Text gut lesbar bleibt.
+*/
+
+
+/* Typografie-System */
+:root {
+  --font-heading: "DynaPuff", sans-serif;
+  --font-body: "Nunito", sans-serif;
+}
+
+/* Grundlegende Typografie */
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* Überschriften */
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  
+}
+
+h1 {
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+/* Fließtext */
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* Navigation */
+nav {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Links */
+a {
+  text-underline-offset: 0.2em;
+}
+
+/* Kleine Zusatztexte */
+small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
